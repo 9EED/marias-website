@@ -5,8 +5,18 @@
     box-sizing: border-box;
 }
 *::selection{
-    background-color: var(--brand-color-weak);
+    background-color: var(--brand-color);
     color: white;
+}
+#announcement-bar{
+    background-color: var(--brand-color-weak);
+    color: var(--brand-color-dark);
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 body{
     font-family: Work Sans, sans-serif;
@@ -21,15 +31,19 @@ body{
     z-index: -1;
 }
 nav{
-    height: 80px;
+    height: 90px;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 50px;
-    margin-top: 40px;
+    padding-top: 80px;
     padding: 0 40px;
+    background: white;
     white-space: nowrap;
+    position: sticky;
+    top: 40px;
+    z-index: 2;
 }
 #mobile-links{
     display: none;
@@ -333,6 +347,7 @@ h1{
     width: 100%;
     background: var(--brand-color-weak);
     clip-path: polygon(100% 100%, 0% 100% , 0.00% 56.62%, 2.00% 53.84%, 4.00% 50.93%, 6.00% 47.98%, 8.00% 45.11%, 10.00% 42.40%, 12.00% 39.97%, 14.00% 37.89%, 16.00% 36.24%, 18.00% 35.08%, 20.00% 34.45%, 22.00% 34.37%, 24.00% 34.84%, 26.00% 35.85%, 28.00% 37.36%, 30.00% 39.32%, 32.00% 41.65%, 34.00% 44.28%, 36.00% 47.12%, 38.00% 50.05%, 40.00% 52.99%, 42.00% 55.82%, 44.00% 58.44%, 46.00% 60.76%, 48.00% 62.71%, 50.00% 64.20%, 52.00% 65.19%, 54.00% 65.64%, 56.00% 65.54%, 58.00% 64.88%, 60.00% 63.70%, 62.00% 62.04%, 64.00% 59.94%, 66.00% 57.50%, 68.00% 54.79%, 70.00% 51.91%, 72.00% 48.96%, 74.00% 46.05%, 76.00% 43.28%, 78.00% 40.75%, 80.00% 38.54%, 82.00% 36.74%, 84.00% 35.41%, 86.00% 34.60%, 88.00% 34.33%, 90.00% 34.62%, 92.00% 35.45%, 94.00% 36.80%, 96.00% 38.62%, 98.00% 40.84%, 100.00% 43.38%);
+    transform: translateY(2px);
 }
 #faq-content{
     background-color: var(--brand-color-weak);
@@ -436,8 +451,8 @@ footer{
     background-color: var(--brand-color-weak);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 30px 20%;
-    gap: 20px;
+    padding: 70px 20%;
+    gap: 70px 20px;
 }
 @media (max-width: 1100px){
     footer{
