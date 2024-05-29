@@ -13,6 +13,7 @@ body{
     font-size: 20px;
     margin: 0;
     padding: 0;
+    width: 100vw;
     overflow-x: hidden;
 }
 .background-img{
@@ -29,6 +30,11 @@ nav{
     margin-top: 40px;
     padding: 0 40px;
     white-space: nowrap;
+}
+@media (max-width: 900px){
+    nav button, nav #links{
+        display: none !important;
+    }
 }
 nav img{
     height: 120px;
@@ -71,11 +77,27 @@ main{
     grid-template-columns: auto 1fr;
     gap: 30px;
 }
+@media (max-width: 1100px){
+    #product{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+}
 #gallery{
     display: grid;
     grid-template-columns: 500px 115px;
     grid-template-rows: 500px;
     gap: 15px;
+    margin: 0 auto;
+}
+@media (max-width: 1100px){
+    #gallery{
+        grid-template-columns: 80vw;
+        grid-template-rows: 80vw 100px;
+    }
+    #thumbnails{
+        flex-direction: row !important;
+    }
 }
 #gallery img{
     border-radius: 3px;
@@ -237,11 +259,16 @@ h1{
     width: 100%;
 }
 
-.other-info{
+#other-info{
     display: grid;
     grid-template-columns: 7fr 8fr;
     margin-top: 50px;
     gap: 80px;
+}
+@media (max-width: 1100px){
+    #other-info{
+        grid-template-columns: 1fr;
+    }
 }
 #reviews h1, #shipping h1{
     margin-bottom: 30px;
@@ -291,16 +318,22 @@ h1{
     flex-direction: column;
     gap: 30px;
     padding: 0 120px 150px 120px;
-
+}
+@media (max-width: 900px){
+    #faq-content{
+        padding: 0 60px 100px 60px;
+    }
 }
 #faq-content h1{
     align-self: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+    font-size: 36px;
+    font-weight: 500;
 }
 
 details {
     position: relative;
-    color: rgb(71, 52, 52);
+    color: #050505;
 }
 summary {
     list-style: none;
@@ -331,6 +364,7 @@ details[open] summary::before {
     gap: 30px;
     flex-wrap: wrap;
     position: relative;
+    overflow: hidden;
 }
 #recommendation-title{
     display: flex;
