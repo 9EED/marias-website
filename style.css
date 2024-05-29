@@ -31,9 +31,20 @@ nav{
     padding: 0 40px;
     white-space: nowrap;
 }
+#mobile-links{
+    display: none;
+    margin-right: 10px;
+}
+#mobile-links img{
+    width: 35px;
+    margin-right: 10px;
+}
 @media (max-width: 900px){
     nav button, nav #links{
         display: none !important;
+    }
+    #mobile-links{
+        display: block !important;
     }
 }
 nav img{
