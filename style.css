@@ -33,7 +33,6 @@ nav{
 }
 #mobile-links{
     display: none;
-    margin-right: 10px;
 }
 #mobile-links img{
     width: 35px;
@@ -44,7 +43,7 @@ nav{
         display: none !important;
     }
     #mobile-links{
-        display: block !important;
+        display: inline !important;
     }
 }
 nav img{
@@ -102,9 +101,12 @@ main{
     margin: 0 auto;
 }
 @media (max-width: 1100px){
+    main{
+        padding: 50px 30px 0 30px;
+    }
     #gallery{
-        grid-template-columns: 80vw;
-        grid-template-rows: 80vw 100px;
+        grid-template-columns: 75vw;
+        grid-template-rows: 75vw 100px;
     }
     #thumbnails{
         flex-direction: row !important;
@@ -279,6 +281,7 @@ h1{
 @media (max-width: 1100px){
     #other-info{
         grid-template-columns: 1fr;
+        gap: 10px;
     }
 }
 #reviews h1, #shipping h1{
@@ -286,7 +289,15 @@ h1{
 }
 .review-head{
     display: grid;
-    grid-template-columns: 90px 130px auto;
+    grid-template-columns: 100px 130px auto;
+}
+@media (max-width: 600px) {
+    .review-head{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 10px;
+    }
 }
 .review-name{
     font-weight: 500;
@@ -371,7 +382,7 @@ details[open] summary::before {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 200px 80px 250px 80px;
+    padding: 200px 80px;
     gap: 30px;
     flex-wrap: wrap;
     position: relative;
@@ -401,8 +412,81 @@ details[open] summary::before {
     border-radius: 10px;
     margin-bottom: 10px;
 }
-
-#footer{
-    padding: 100px;
+@media (max-width: 600px) {
+    #recommendations{
+        padding: 100px 0;
+    }
+    #recommendation-title{
+        margin: 0;
+        text-align: center;
+        width: 80vw;
+    }
+    #recommendation-title br{
+        display: none;
+    }
+    #recommendations{
+        gap: 50px;
+    }
+    .recommendation-image{
+        width: 80vw;
+        height: 80vw;
+    }
+}
+footer{
     background-color: var(--brand-color-weak);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px 20%;
+    gap: 20px;
+}
+@media (max-width: 1100px){
+    footer{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+footer h2{
+    font-size: 20px;
+    text-align: center;
+}
+footer h3{
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+footer li{
+    font-size: 18px;
+}
+#footer-form *{
+    display: block;
+}
+#footer-form input{
+    border: solid #ddd 1px;
+    border-radius: 8px;
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+#footer-form button{
+    width: 70%;
+    margin: 20px auto;
+}
+#footer-links{
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#footer-links a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+#footer-links a:hover{
+    text-decoration: underline;
+}
+#left, #right{
+    display: flex;
+    gap: 20px;
 }
