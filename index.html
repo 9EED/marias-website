@@ -89,9 +89,9 @@
                     </div>
                     <div id="add-to-cart">
                         <div id="quantity">
-                            <button>-</button>
-                            <input type="number" value="1">
-                            <button>+</button>
+                            <button onclick="document.getElementById('quantity-input').value = document.getElementById('quantity-input').value*1 - 1">-</button>
+                            <input type="number" id="quantity-input" value="1">
+                            <button onclick="document.getElementById('quantity-input').value = document.getElementById('quantity-input').value*1 + 1">+</button>
                         </div>
                         <button class="button fill">Add to cart</button>
                     </div>
